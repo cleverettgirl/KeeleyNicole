@@ -204,11 +204,19 @@ textarea {
         width:96vw;
     }
 
-    #navbar{
+/*    #navbar{
         width:100vw;
         height:75px;
         background-color:#f6f7f8;
-    }
+        left:0;
+        padding:20px 0;
+        position:fixed;
+        top:0;
+        z-index:5000 !important;
+        transition: top 0.2s ease-in-out;
+        transition: top 0.4s, left 0.4s 0.5s !important;   
+}*/
+
 
     ul, li {
         text-decoration: none;
@@ -257,10 +265,27 @@ textarea {
         margin-top:30px;
     }
 
+    .missionblog{
+        font-family:sans-serif;
+        color: #6F6D6A;
+        padding-bottom:40px;
+        font-size:12px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 1.53em;
+    }
+
     #aboutk{
         width:100%;
         height:100%;
         background-color:#f6f7f8;
+        margin-bottom:30px;
+        margin-top:30px;
+    }
+
+    #contact{
+        width:100%;
+        height:100%;
         margin-bottom:30px;
         margin-top:30px;
     }
@@ -278,8 +303,8 @@ textarea {
         font-family: 'Playfair Display', serif;
         font-size:15px;
         letter-spacing:2px;
-        padding-top:50px;
-        padding-bottom:30px;
+        padding-top:30px;
+        padding-bottom:10px;
     }
 
     p.mission{
@@ -439,27 +464,32 @@ textarea {
     }
 
 #a{
-    background-image:url('../img/shoes.jpg');
-    background-size:cover;
     height:300px;
     width:300px;
     margin-right:10px;
 }
 
 #b{
-    background-image:url('../img/ring.jpg');
-    background-size:cover;
+
     height:300px;
     width:300px;
     margin-right:10px;
 }
 
 #c{
-    background-image:url('../img/sparkler.jpg');
-    background-size:cover;
     height:300px;
     width:300px;
     margin-right:10px;
+}
+
+section#blogreads{
+    width:100vw;
+    height:100vh;
+}
+
+section#contact{
+    width:100vw;
+    height:100vh;
 }
 
 
