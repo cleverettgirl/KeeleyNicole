@@ -1,9 +1,9 @@
 <?php
 if(isset($_POST['submit'])){
     $to = "dkelmanson@gmail.com"; // this is your Email address
-    $from = $_POST['email']; // this is the sender's Email address
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
+    $from = $_POST['your-email']; // this is the sender's Email address
+    $name = $_POST['your-name'];
+    $phone = $_POST['your-number'];
     $subject = "Form submission";
     $subject2 = "Copy of your form submission";
     $message = $name . " " . $phone . " wrote the following:" . "\n\n" . $_POST['message'];
