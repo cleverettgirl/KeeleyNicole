@@ -496,7 +496,27 @@ textarea {
     width:100vw;
 }
 
-.inspo {
+.inspo{
+    font-family: 'Playfair Display', sans-serif;
+    text-transform:uppercase;
+    font-size:20px;
+    font-style: italic;
+    letter-spacing:2px;
+    color:white;
+    height:40px;
+    width:150px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:150px;
+    margin:auto;
+}
+
+.dotline{
+    padding-left:40px;
+}
+
+/*.inspo {
     font-family:sans-serif;
     text-transform: uppercase;
     text-align:center;
@@ -526,7 +546,7 @@ textarea {
     margin-right:auto;
     position:absolte;
     margin-top:5px;
-}
+}*/
 
 #containerbreak{
     margin:0;
@@ -552,12 +572,16 @@ width:100vw;
 background-color:#f6f7f8;
 font-family: sans-serif;
 margin-top: 50px;
+margin:0;
+position:relative;
 }
 
 .footername{
     font-size:9px;
     text-transform:uppercase;
     letter-spacing:1px;
+    height:20px;
+    margin-top:50px;
 }
 
 .social{
@@ -572,10 +596,11 @@ margin-top: 50px;
 
 /* CONTACT FORM */
 .disappear {
-    height: 50px;
-    width: 100px;
+    height: auto;
+    width: auto;
     display: none;
-    margin: 0 auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
 }
 
 .contact-form {
