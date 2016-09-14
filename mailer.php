@@ -40,7 +40,7 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong and we couldn't send your message.";
+            echo "Oops! Something went wrong and we HATE YOU.";
         }
 
     } else {

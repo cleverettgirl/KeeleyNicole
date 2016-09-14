@@ -537,9 +537,11 @@ textarea {
     max-width: 960px;
 }
 
-section.contact{
-    width:100vw;
-    height:100vh;
+.contact{
+    width:auto;
+    height:auto;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 /* FOOTER */
@@ -549,7 +551,7 @@ height: 100px;
 width:100vw;
 background-color:#f6f7f8;
 font-family: sans-serif;
-margin:0;
+margin-top: 50px;
 }
 
 .footername{
@@ -563,10 +565,23 @@ margin:0;
     line-height:100px;
 }
 
+.fa{
+    margin-top:50px;
+    margin-right:5px;
+}
+
 /* CONTACT FORM */
+.disappear {
+    height: 50px;
+    width: 100px;
+    display: none;
+    margin: 0 auto;
+}
 
 .contact-form {
         height: 100%;
+        padding-left: 80px;
+        padding-right: 80px;
     }
 
 .contact-form .clear-form {
