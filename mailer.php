@@ -29,7 +29,7 @@
         // Build the email content.
         $email_content = "Name: $name\n";
         $email_content .= "Email: $email\n\n";
-        $email_content .= "Phone: $phone\n\n";
+        $email_content .= "Phone: $number\n\n";
         $email_content .= "Message:\n$message\n";
 
         // Build the email headers.
@@ -43,7 +43,7 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong and we HATE YOU.";
+            echo "Oops! Something went wrong.";
         }
 
     } else {
