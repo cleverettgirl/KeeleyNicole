@@ -33,9 +33,6 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
-
-
     <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
          <div class="container">
                 <ul class="row">
@@ -43,7 +40,7 @@
                     <li class="col-sm-1"><a href="#aboutk"><span style="float:right"> About </span></a></li>
                     <a href="home.html"><li class="col-sm-2" id="navlogo"></li></a>
                     <li class="col-sm-1"><a href="blog.html"> Blog </a></li>
-                    <li class="col-sm-1"><a href="#contact"> Contact </a></li>
+                    <li class="col-sm-1"><a href="#countach"> Contact </a></li>
                 </ul>
          </div>
      </nav>
@@ -160,8 +157,11 @@
                     </div>
                 </div>
             </div>
+                                    <div id="countach"></div>
+
         </div>
     </section>
+
 
     <!-- <section class="contact" id="contact">
         <div class="container">
@@ -216,6 +216,54 @@
         </div>
     </section> -->
 
+    <!--<section class="contact" id="contact">-->
+  
+        <!--<div class="disappear">-->
+        <!--    <center><h2>Thanks for reaching out!</h2></center>-->
+        <!--</div>-->
+        
+
+    <div class="contact-form">
+      <div class="row">
+        <h4 class="titleblog"><center>Contact Me</center></h4>
+        <p class="missionblog">No dream is too big..</p>
+      </div>
+             
+         <div id="form-messages"></div>
+    
+		<form id="ajax-contact" method="post" action="mailer.php">
+		  <div class="contact-input">
+			<div class="field" id="your-name">
+				<!--<label for="name">Name</label>-->
+				<input type="text" id="name" name="name" placeholder="NAME" required>
+			</div>
+	      </div>
+          <div class="contact-input">
+			<div class="field" id="your-email">
+			    <!--<label for="email">Email</label>-->
+				<input type="email" id="email" name="email" placeholder="EMAIL" required>
+			</div>
+	      </div>
+          <div class="contact-input">
+              <div class="field" id="your-number">
+                  <!--<label for="number">Number</label>-->
+                  <input type="number" id="number" name="number" placeholder="NUMBER" required>
+              </div>
+          </div>
+          <div id="messagearea">
+			<div class="field" id="your-message">
+				<!--<label for="message">Message</label>-->
+				<textarea id="message" name="message" placeholder="MESSAGE" required></textarea>
+			</div>
+          </div>
+			<div class="field">
+				<button type="submit">SEND</button>
+			</div>
+		</form>
+	</div>
+  </div>
+    <!--</section>-->
+
 
         <footer>
             <div class="container" id="foot">
@@ -236,8 +284,6 @@
 
 
 
-
-
         <!-- Font Awesome -->
         <script src="https://use.fontawesome.com/41d86afdaf.js"></script>
 
@@ -245,11 +291,15 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/scripts.js"></script>
-        <script src="js/jquery.js"></script>
         <script src="js/jquery.form.min.js"></script>
         <script src="js/main.js"></script>
+        <!--<script src="js/app.min.js"></script>-->
+        <script src="js/jquery.js"></script>
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="js/vendor/jquery-1.12.0.min.js"></script>
+        <script src="js/jquery-2.1.0.min.js"></script>
+    	<script src="js/app.js"></script>
+
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
@@ -267,5 +317,33 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
         </script>
         <!--End Bootstrap-->
+         <script>
+        //     $('#messagesubmit').click(function(e)
+        //         {
+        //             e.preventDefault();
+        //             var values = $('form').serialize();
+        //             // alert(values);
+        //                 $.ajax({
+        //                 url: "mailer.php",
+        //                 type: "post",
+        //                 data: values,
+        //                 success: function () {
+        //                     // var msg = $.parseJSON(response);
+        //                   // you will get response from your php page (what you echo or print)                 
+        //                     // alert('msg');
+        //                 },
+        //                 error: function() {
+        //                 // //   console.log(textStatus, errorThrown);
+        //                 // alert("did not work");
+        //                 }
+                
+                
+        //             });
+        //             $(".contact-form").fadeOut("fast");
+        //             $(".disappear").slideDown();
+        //         })
+        // </script>
+        
+        
     </body>
 </html>
