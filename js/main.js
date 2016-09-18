@@ -21,7 +21,7 @@
 });
   }(jQuery));
 
-//   // Set jQuery $ variable
+// Set jQuery $ variable
 // (function ($) {
 //    $(document);
 //
