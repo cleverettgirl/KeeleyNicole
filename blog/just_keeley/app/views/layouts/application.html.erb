@@ -1,14 +1,71 @@
 <!DOCTYPE html>
 <html>
 <head>
+
   <title>JustKeeley</title>
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
+  <%= stylesheet_link_tag 'application', 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= favicon_link_tag 'favicon.icon' %>
+
 </head>
 <body>
 
-<%= yield %>
 
+
+  <div id="sidebar">
+    <div id="logo" class="img-responsive">
+      <%= link_to root_path do %>
+        <%= image_tag "unnamed-2.svg" %>
+      <% end %>
+    </div>
+
+
+<!--     <nav class="navbar navbar-default navbar-fixed-top " role="navigation" id="blognav">
+        <div class="container">
+            <ul class="row">
+                <li class="col-sm-1 col-sm-offset-3"><a href="#promise"> Promise </a></li>
+                <li class="col-sm-1"><a href="#aboutk"><span style="float:right"> About </span></a></li>
+                    <a href="home.html"><li class="col-sm-2" id="navlogo"></li></a>
+                <li class="col-sm-1"><a href="blog.html"> Blog </a></li>
+                <li class="col-sm-1"><a href="#contact"> Contact </a></li>
+            </ul>
+        </div> 
+    </nav> -->
+
+
+
+    <% if !user_signed_in? %>
+          <p class="sign_in"><%= link_to "Admin Login", new_user_session_path %></p>
+    <% end %>
+
+  </div>
+
+  <div id="main_content">
+    <div id="header">
+      <% if current_page?(root_path) %>
+        <p>All Posts</p>
+      <% elsif current_page?(about_path) %>
+        <p>About</p>
+      <% else %>
+        <%= link_to "Back to All Posts", root_path %>
+      <% end %>
+
+      <% if user_signed_in? %>
+        <div class="buttons">
+          <button class="button"><%= link_to "New Post", new_post_path %></button>
+          <button class="button">Log Out</button>
+        </div>
+      <% end %>
+    </div>
+
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert") %>
+    <% end %>
+
+    <%= yield %>
+  </div>
 </body>
 </html>

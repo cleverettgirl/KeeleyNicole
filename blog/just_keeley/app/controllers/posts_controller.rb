@@ -4,25 +4,26 @@ class PostsController < ApplicationController
 
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
   end
 
   def new
-    @posts = Post.new
+    @post = Post.new
   end
 
   def create
-    @post = Post.new
-    if @post.save(post_params)
-      flash[:notice] = "Successfully created new post!"
-      redirect_to post_path(@post)
+    @post = Post.new(post_params)
+    if @post.save
+      flash[:notice] = "Successfully created post!"
+      redirect_to @post
     else
       flash[:alert] = "Error creating new post!"
-      render :new
+      render 'new'
     end
   end
 
   def edit
+    @post = Post.find(params[:id])
   end
 
   def update
@@ -36,6 +37,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = Post.find
   end
 
   def destroy
@@ -57,6 +59,6 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-  
+
 
 end

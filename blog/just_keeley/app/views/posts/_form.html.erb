@@ -1,18 +1,17 @@
 <%= simple_form_for @post do |f| %>
+<%# form_for @post do |f| %>
   <% if @post.errors.any? %>
-    <div id="error_explanation">
+    <div id="errors">
       <h2>
-        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved" %>
+        <%= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:" %>
       </h2>
       <ul>
         <% @post.errors.full_messages.each do |msg| %>
-          <li>
-            <%= msg %>
-          </li>
-          <% end %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
-    <% end %>
+  <% end %>
 
   <div class="form-group">
     <%= f.input :title, class: "form-control" %>
@@ -25,4 +24,15 @@
   <div class="form-group">
     <%= f.button :submit %>
   </div>
+
+  <!--
+  <%# f.label :title %><br> 
+  <%# f.text_field :title %><br>
+  <br>
+  <%# f.label :body %><br>
+  <%# f.text_field :body %><br>
+  <br>
+  <%# f.submit %> 
+  -->
+
 <% end %>
