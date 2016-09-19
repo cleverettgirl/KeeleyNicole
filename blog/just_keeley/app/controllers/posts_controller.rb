@@ -27,20 +27,24 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update_attributes(post_params)
+    @post = Post.find(params[:id])
+
+    if @post.update(params[:post].permit(:title, :body))
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to @post
     else
       flash[:alert] = "Error updating post!"
-      render :edit
+      render 'edit'
     end
   end
 
   def show
-    @post = Post.find
+    @post = Post.find(params[:id])
   end
 
   def destroy
+    @post = Post.find(params[:id])
+
     if @post.destroy
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
