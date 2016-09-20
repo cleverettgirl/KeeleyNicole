@@ -51,5 +51,25 @@
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
+    
+    
+    $body = <<<EOD
+        <br><hr><br>
+        Name: $name <br>
+        Email: $email <br>
+        Number: $number <br>
+        Message: $message <br>
 
-?>
+EOD;
+        $headers = "From: $email\r\n";
+        $headers .= "Content-type: text/html\r\n";
+        
+        $success = mail($webMaster, $emailSubject, $body, $headers);
+        
+        $theResults = <<<EOD
+EOD;
+
+
+echo "$theResults";
+
+?> 
