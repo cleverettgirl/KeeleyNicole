@@ -94,10 +94,11 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
+@media screen and (max-width:736px) {
+.navbar-default {
+    visibility: hidden;
+    }
+}
 
 
 
@@ -204,14 +205,65 @@ textarea {
 /* ==========================================================================
    Navbar
    ========================================================================== */
+ul.navi {
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    border:none;
+    max-height:75px;
+    padding-right: .25%;
+}
 
+ul.navi li {
+    float: left;
+}
+
+ul, li {
+    text-decoration: none;
+    list-style: none;
+    font-family: sans-serif;
+    font-size:9px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    line-height:75px;
+    text-align: center;
+    color:#d7c8a1 !important;
+}
+
+ul.navi li a:hover {
+        color:#d7c8a1;
+        text-decoration:none;
+    }
+
+ul.navi li.icon {
+    visibility: hidden;
+}
+
+a, a:visited {
+    color:#d7c8a1;
+    text-decoration:none;
+}
+
+ul.navi li a {
+    display: inline-block;
+    color: #d7c8a1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+/*container#navi {
+    padding-right: 25%;
+}*/
     
-    .navbar-default{
+   .navbar-default{
         box-shadow: none;
         -webkit-box-shadow:none;
         border:none;
         max-height:75px;
     }
+
+    /*
 
     ul, li {
         text-decoration: none;
@@ -224,7 +276,6 @@ textarea {
         text-align: center;
         color:#d7c8a1 !important;
     }
-
     a, a:visited {
         color:#d7c8a1;
         text-decoration:none;
@@ -234,6 +285,7 @@ textarea {
         color:#d7c8a1;
         text-decoration:none;
     }
+*/
 
 
     li#navlogo{
@@ -868,7 +920,3 @@ footer{
     }
 }
 
-/* @media only screen and 
-     (min-width: 736px) {
-    }
-*/

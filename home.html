@@ -34,13 +34,14 @@
 
         <!-- Add your site or application content here -->
     <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
-         <div class="container">
-                <ul class="row">
-                    <li class="col-sm-1 col-sm-offset-3"><a href="#promise"> Promise </a></li>
-                    <li class="col-sm-1"><a href="#aboutk"><span style="float:right"> About </span></a></li>
-                    <a href="home.html"><li class="col-sm-2" id="navlogo"></li></a>
-                    <li class="col-sm-1"><a href="blog.html"> Blog </a></li>
-                    <li class="col-sm-1"><a href="#countach"> Contact </a></li>
+         <div class="container" id="navi">
+                <ul class="navi row" id="myNavi">
+                    <li class="col-sm-offset-1 col-sm-1 col-md-offset-3 col-md-1"><a href="#promise">Promise</a></li>
+                    <li class="col-sm-offset-1 col-sm-1 col-md-1"><a href="#aboutk">About</a></li>
+                    <li class="col-sm-2 col-md-2" id="navlogo"><a class="active" href="home.html"></a></li>
+                    <li class="col-sm-1 col-md-1"><a href="blog.html">Blog</a></li>
+                    <li class="col-sm-1 col-md-1"><a href="#countach">Contact</a></li>
+                    <li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a></li>
                 </ul>
          </div>
      </nav>
@@ -250,6 +251,16 @@
         </script>
         
         <!--Bootstrap-->
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myNavi");
+                if (x.className === "navi") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navi";
+                }
+            }
+        </script>
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!--End Bootstrap-->
