@@ -94,11 +94,297 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-@media screen and (max-width:736px) {
-.navbar-default {
-    visibility: hidden;
+
+    .backsplash {
+        background-image:url('../img/moto.jpg');
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        width:100%;
+        height:500px;
+    /*    background-position: center;*/
+        /*margin-bottom:50px;*/
     }
+
+    .row{
+        margin-right:0!important;
+        margin-left:0 !important;
+    }
+    
+
+  
+/* ==============================
+   Promise Section
+   ============================== */
+
+
+    #promise{
+        margin-left:0 !important;
+        margin-right:0 !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+        width:100vw;
+        padding-top:10px;
+        margin-bottom:70px;
+    }
+
+    #promise > .row {
+        margin-left:0 !important;
+        margin-right:0 !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    #mission{
+        width:100vw;
+        background-color:#f6f7f8;
+        margin-bottom:25px;
+        margin-top:15px;
+    }
+
+    p.mission{
+        font-family:sans-serif;
+        color: #6F6D6A;
+        padding-bottom:70px;
+        padding-top:20px;
+        font-size:12px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 1.53em;
+        margin-bottom:20px;
+    }
+
+    .title{
+        text-transform:uppercase;
+        font-family: 'Playfair Display', serif;
+        font-size:15px;
+        letter-spacing:2px;
+        padding-top:70px;
+        margin-top:20px;
+        margin-bottom:20px;
+    }
+
+    div.about1{
+        /*background-color:#d7c8a1;*/
+        background-image:url('../img/dress.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        /*background-position-x:-100px;*/
+        height:550px;
+        width:100%;
+        display:inline-block;
+        padding: 50px;        
+        float:left;
+        padding-top:150px;
+     }
+
+    div.about2{
+        background-image:url('../img/scenic.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+       /* background-position-y: -20px;*/
+        /*background-position-x: -100px;*/
+        height:300px;
+        float:right;
+        opacity:1;
+        width:100%;
+        display:inline-block;
+        margin-top:15px;
+    }
+
+    div.about3{
+        background-image:url('../img/AnthonyKeeley.jpg');
+        background-size:cover;
+        background-repeat:no-repeat;
+        /*background-position-y: -50px;*/
+        height:300px;
+        float:right;
+        /*opacity:.5;*/
+        width:100%;
+        display:inline-block;
+        margin-top:15px;
+    }
+
+    .about1 > p {
+        padding-left:100px;
+        padding-right:100px;
+        text-align: center;
+    }
+
+    .about4 > p {
+        padding-left:100px;
+        padding-right:100px;
+        text-align: center;
+    }
+    
+    #a4{
+        font-family: 'Playfair Display', serif;
+        font-size:14px;
+        text-transform: uppercase;
+        letter-spacing:2px;
+        line-height:1.5em;
+        margin-bottom:0 !important;
+    }
+
+    .line{
+        padding-bottom:10px;
+    }
+
+    .services{
+        font-family: sans-serif !important;
+        font-size: 9px !important;
+        letter-spacing:1px;
+        text-transform: uppercase;
+        line-height:2em;
+        text-align: center;
+    }
+
+    .red{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    .orange{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+
+    .yellow{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    /* ==========================================================================
+   About Section
+   ========================================================================== */
+
+    p.title{
+        color:white;
+        font-family: verdana;
+        letter-spacing: 1px;
+        font-size: 10px;
+        text-transform: uppercase;
+        margin-top:50px;
+        padding:20px;
+        border:1px solid white;
+        display:inline-block;
+    }
+
+    .aboutk{
+        width:100vw;
+        background-color:#f6f7f8;
+        padding-bottom: 60px;
+    }
+
+/* ==========================================================================
+   Blog Reads
+   ========================================================================== */
+
+    section.blogreads {
+    width:100vw;
+    }
+
+    .blogreads{
+        padding-top:100px;
+    }
+
+    .titleblog{
+        text-transform:uppercase;
+        font-family: 'Playfair Display', serif;
+        font-size:15px;
+        letter-spacing:2px;
+        padding-bottom:20px;
+
+    }
+
+    .missionblog{
+        font-family:sans-serif;
+        color: #6F6D6A;
+        font-size:12px;
+        letter-spacing: 1px;
+        text-align: center;
+        line-height: 1.53em;
+    } 
+
+    #passion{
+        margin-top:13px;
+    }
+
+    #a{
+        width:350px;
+        height:300px;
+    }
+
+    #b{
+        width:350px;
+        height:350px;
+    }
+
+    #c{
+        width:350px;
+        height:350px;
+    }
+
+.posttitle{
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 1px;
+        text-align:center;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top:30px;
+/*        padding:20px;*/
+ /*       border:1px solid white;
+*/      display:inline-block;
+        width: 350px;
 }
+
+#breakimg{
+    margin-top:150px;
+    background-image:url('../img/leaf.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position-y:-200px;
+    height:300px;
+    width:100vw;
+}
+
+.dotline{
+    padding-left:40px;
+}
+
+#containerbreak{
+    margin:0;
+}
+
+.wrap {
+    max-width: 960px;
+}
+
+/* ==========================================================================
+   Inspiration
+   ========================================================================== */
+
+.inspo{
+    font-family: 'Playfair Display', sans-serif;
+    text-transform:uppercase;
+    font-size:20px;
+    font-style: italic;
+    letter-spacing:2px;
+    color:white;
+    height:40px;
+    width:150px;
+    position: absolute;
+    top:0;
+    bottom:0;
+    right:auto;
+    margin:auto; 
+}
+
+.dotline{
+    padding-left:40px;
+}
+
 
 
 
@@ -183,6 +469,29 @@ textarea {
    ========================================================================== */
 
 @media only screen and 
+    (max-width: 35em) {
+
+    .backsplash {
+        background-image:url('../img/moto.jpg');
+        background-size:cover;
+        background-position:center;
+        height:79vh;
+        width:100vw;
+        background-position: center;
+    }
+    .logo{
+        visibility: hidden;
+        height:18vh;
+        margin-top:10px;
+        text-align:left;
+    }
+
+
+    
+}
+
+
+@media only screen and 
     (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
 
@@ -197,6 +506,7 @@ textarea {
     }
 
     .logo{
+        visibility: visible;
         height:18vh;
         margin-top:10px;
         text-align:center;
@@ -209,7 +519,7 @@ ul.navi {
     box-shadow: none;
     -webkit-box-shadow:none;
     border:none;
-    max-height:75px;
+    max-height:90px;
     padding-right: .25%;
 }
 
@@ -224,7 +534,7 @@ ul, li {
     font-size:9px;
     text-transform:uppercase;
     letter-spacing:2px;
-    line-height:75px;
+    line-height:50px;
     text-align: center;
     color:#d7c8a1 !important;
 }
@@ -296,6 +606,7 @@ ul.navi li a {
         height:75px;
         width:150px;
         margin:0 auto;
+        visibility: visible;
     }
 
 /* ==========================================================================
@@ -318,7 +629,7 @@ ul.navi li a {
         margin-right:0 !important;
         padding-left:0 !important;
         padding-right:0 !important;
-    }
+    } 
 
     #mission{
         width:100vw;
@@ -367,7 +678,7 @@ ul.navi li a {
         background-image:url('../img/scenic.jpg');
         background-size:cover;
         background-repeat:no-repeat;
-        background-position-y: -20px;
+        /*background-position-y: -20px;*/
         /*background-position-x: -100px;*/
         height:268px;
         float:right;
@@ -375,6 +686,7 @@ ul.navi li a {
         width:99%;
         display:inline-block;
         margin-bottom:15px;
+        margin-top:0px;
     }
 
     div.about3{
@@ -387,6 +699,7 @@ ul.navi li a {
         /*opacity:.5;*/
         width:99%;
         display:inline-block;
+        margin-top:0;
     }
 
     .about1 > p {
