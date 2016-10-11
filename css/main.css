@@ -16,6 +16,10 @@ html {
     line-height: 1.4;
 }
 
+::-webkit-scrollbar { 
+    display: none; 
+}
+
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -95,6 +99,8 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/* Landscape phones and down */
+@media (max-width: 670px) { 
     .backsplash {
         background-image:url('../img/moto.jpg');
         background-size:cover;
@@ -102,20 +108,23 @@ textarea {
         background-repeat:no-repeat;
         width:100%;
         height:500px;
-    /*    background-position: center;*/
-        /*margin-bottom:50px;*/
     }
 
     .row{
         margin-right:0!important;
         margin-left:0 !important;
     }
-    
 
-  
-/* ==============================
-   Promise Section
-   ============================== */
+    .logo{
+        display:none;
+    }
+
+
+    /* ==============================
+            Promise Section
+    ============================== */
+
+
 
 
     #promise{
@@ -178,7 +187,7 @@ textarea {
         padding-top:150px;
      }
 
-    div.about2{
+    div.about2, div.about3{
         background-image:url('../img/scenic.jpg');
         background-size:cover;
         background-repeat:no-repeat;
@@ -194,24 +203,9 @@ textarea {
 
     div.about3{
         background-image:url('../img/AnthonyKeeley.jpg');
-        background-size:cover;
-        background-repeat:no-repeat;
-        /*background-position-y: -50px;*/
-        height:300px;
-        float:right;
-        /*opacity:.5;*/
-        width:100%;
-        display:inline-block;
-        margin-top:15px;
     }
 
-    .about1 > p {
-        padding-left:100px;
-        padding-right:100px;
-        text-align: center;
-    }
-
-    .about4 > p {
+    .about1>p, .about4 >p {
         padding-left:100px;
         padding-right:100px;
         text-align: center;
@@ -239,25 +233,15 @@ textarea {
         text-align: center;
     }
 
-    .red{
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-
-    .orange{
+    .red, .orange, .yellow{
         padding-left:0 !important;
         padding-right:0 !important;
     }
 
 
-    .yellow{
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-
-    /* ==========================================================================
-   About Section
-   ========================================================================== */
+    /*  ============================
+                About Section
+        ============================ */
 
     p.title{
         color:white;
@@ -277,13 +261,9 @@ textarea {
         padding-bottom: 60px;
     }
 
-/* ==========================================================================
-   Blog Reads
-   ========================================================================== */
-
-    section.blogreads {
-    width:100vw;
-    }
+/* ================================
+            Blog Reads
+   ================================ */
 
     .blogreads{
         padding-top:100px;
@@ -294,8 +274,7 @@ textarea {
         font-family: 'Playfair Display', serif;
         font-size:15px;
         letter-spacing:2px;
-        padding-bottom:20px;
-
+        padding-bottom:30px;
     }
 
     .missionblog{
@@ -311,79 +290,233 @@ textarea {
         margin-top:13px;
     }
 
-    #a{
-        width:350px;
+    #a, #b, #c{
+        width:100%;
         height:300px;
+        object-fit:cover;
     }
 
-    #b{
-        width:350px;
-        height:350px;
-    }
 
-    #c{
-        width:350px;
-        height:350px;
-    }
-
-.posttitle{
+    .posttitle{
         font-family: 'Playfair Display', serif;
         letter-spacing: 1px;
         text-align:center;
         font-size: 14px;
         text-transform: uppercase;
         margin-top:30px;
-/*        padding:20px;*/
- /*       border:1px solid white;
-*/      display:inline-block;
-        width: 350px;
+        display:inline-block;
+        width: 100%;
+    }
+
+/* ============================
+            Inspiration
+   ============================*/
+
+   #breakimg{
+        margin-top:70px;
+        background-image:url('../img/leaf.jpg');
+        background-repeat:no-repeat;
+        background-size:cover;
+        height:200px;
+        width:100vw;
+    }
+
+    .dotline{
+        padding-left:40px;
+    }
+
+    #containerbreak{
+        margin:0;
+        padding-left:0;
+        padding-right:0;    
+    }
+
+    .wrap {
+        max-width: 960px;
+    }
+
+    div#containerbreak.container{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+    .inspo{
+        font-family: 'Playfair Display', sans-serif;
+        text-transform:uppercase;
+        font-size:20px;
+        font-style: italic;
+        letter-spacing:2px;
+        color:white;
+        height:40px;
+        width:92%;
+        position: absolute;
+        top:0;
+        bottom:0;
+        right:auto;
+        margin:auto;
+        float:right;
+        text-align:right; 
+    }
+
+    .dotline{
+        padding-left:40px;
+    }
+
+    #contact{
+        width:100%;
+        height:75vh;
+        margin-bottom:30px;
+        margin-top:30px;
+}
+    
+.contact{
+    width:auto;
+    height:auto;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-#breakimg{
-    margin-top:150px;
-    background-image:url('../img/leaf.jpg');
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-position-y:-200px;
-    height:300px;
+/* =====================
+        CONTACT
+   ===================== */
+
+    .contact-form {
+            height: 100%;
+            padding-left: 50px;
+            padding-right:50px;
+            padding-top:80px;
+    }
+
+    .contact-form input[type=email], .contact-form input[type=text] {
+        /*width: 300px;*/
+        max-width: 98%;
+        margin-bottom: 13px
+    }
+
+    label {
+      display: block;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      color: #999999;
+    }
+
+    input {
+        border: 2px solid #333;
+        display:block;
+        margin-bottom: 13px;
+        padding: 9px 10px;
+        background: none;
+        width: 100%;
+        float: left;
+        margin-right: 0.9%;
+        font-family:'Playfair', times;
+    }
+
+    #your-number input{
+        width: 100%;
+        float: right;
+        margin-right: 0;
+    }
+
+    #messagearea {
+        width: 100%;
+    }
+
+    textarea {
+      width: 100%;
+      height: 185px;
+      padding: 0.5em 0.5em;
+      font-size: 1.2em;
+      border-radius: 3px;
+      border: 2px solid #333;
+      resize: none;
+      margin-bottom: 5px;
+      font-family: 'Playfair', times;
+    }
+
+    button {
+        width: 100%;
+        background: none;
+        color: #333333;
+        border: 2px solid #333;
+        padding: 8px;
+        letter-spacing:1px;
+        font-family: 'Playfair', times;
+    }
+
+    button:hover, button:focus {
+      cursor: pointer;
+      background-color: #edf4f4;
+    }
+
+    button:active {
+      opacity: 1;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    .success {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: black;
+      background-color: #edf4f4;
+      border: 1px solid black;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+    }
+
+    .error {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: black;
+      background-color: #ff6666;
+      border: 1px solid black;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+    }
+
+    textarea:focus, input:focus{
+        outline: none;
+    }
+
+/* =======================
+        FOOTER
+   ======================= */
+
+   footer{
+    height: 100px;
     width:100vw;
+    background-color:#f6f7f8;
+    font-family: sans-serif;
+    margin-top: 50px;
+    position:relative;
+    }
+
+    .footername{
+        font-size:9px;
+        text-transform:uppercase;
+        letter-spacing:1px;
+        height:20px;
+        margin-top:50px;
+        display:inline-block;
+    }
+
+    .social{
+        float:right;
+        line-height:100px;
+    }
+
+    .fa{
+        margin-top:50px;
+        margin-right:5px;
+        color: black !important;
+        float:right;
+    }
 }
 
-.dotline{
-    padding-left:40px;
-}
-
-#containerbreak{
-    margin:0;
-}
-
-.wrap {
-    max-width: 960px;
-}
-
-/* ==========================================================================
-   Inspiration
-   ========================================================================== */
-
-.inspo{
-    font-family: 'Playfair Display', sans-serif;
-    text-transform:uppercase;
-    font-size:20px;
-    font-style: italic;
-    letter-spacing:2px;
-    color:white;
-    height:40px;
-    width:150px;
-    position: absolute;
-    top:0;
-    bottom:0;
-    right:auto;
-    margin:auto; 
-}
-
-.dotline{
-    padding-left:40px;
-}
 
 
 
@@ -468,27 +601,6 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and 
-    (max-width: 35em) {
-
-    .backsplash {
-        background-image:url('../img/moto.jpg');
-        background-size:cover;
-        background-position:center;
-        height:79vh;
-        width:100vw;
-        background-position: center;
-    }
-    .logo{
-        visibility: hidden;
-        height:18vh;
-        margin-top:10px;
-        text-align:left;
-    }
-
-
-    
-}
 
 
 @media only screen and 
@@ -619,7 +731,7 @@ ul.navi li a {
         margin-right:0 !important;
         padding-left:0 !important;
         padding-right:0 !important;
-        width:97vw;
+        width:100vw;
         padding-top:10px;
         margin-bottom:70px;
     }
@@ -630,6 +742,8 @@ ul.navi li a {
         padding-left:0 !important;
         padding-right:0 !important;
     } 
+
+
 
     #mission{
         width:100vw;
@@ -809,8 +923,9 @@ ul.navi li a {
     }
 
     #a{
-        width:350px;
+        width:100%;
         height:300px;
+        object-fit:cover;
     }
 
     #b{
@@ -833,7 +948,7 @@ ul.navi li a {
 /*        padding:20px;*/
  /*       border:1px solid white;
 */      display:inline-block;
-        width: 350px;
+        width: 100%;
 }
 
 #breakimg{
@@ -852,6 +967,8 @@ ul.navi li a {
 
 #containerbreak{
     margin:0;
+    padding-left:0;
+    padding-right:0;    
 }
 
 .wrap {
@@ -932,41 +1049,13 @@ ul.navi li a {
     padding-left:40px;
 }
 
-/*.inspo {
-    font-family:sans-serif;
-    text-transform: uppercase;
-    text-align:center;
-    font-size:10px;
-    letter-spacing:2px;
-    height:40px;
-    width:150px;
-    border:1px solid white;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
-.inspo>p{
-    line-height:30px;
-    height:29px;
-    width:140px;
-    opacity:1;
-    color:gray;
-    border:1px solid white;
-    background-color:white;
-    margin-left:auto;
-    margin-right:auto;
-    position:absolte;
-    margin-top:5px;
-}*/
-
 #containerbreak{
-    margin:0;
+    /*margin:0;*/
 }
 
+.row.rowbreakimg{
+    margin-left:0 !important;
+}
 
 .wrap {
     max-width: 960px;
@@ -977,161 +1066,143 @@ ul.navi li a {
    Contact Form
    ========================================================================== */
 
-#contact{
-        width:100%;
-        height:75vh;
-        margin-bottom:30px;
-        margin-top:30px;
-}
-    
-.contact{
-    width:auto;
-    height:auto;
-    margin-left: 50px;
-    margin-right: 50px;
-}
-
-/*.disappear {
-    height: auto;
-    width: auto;
-    display: none;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}*/
-
 .contact-form {
-        height: 100%;
-        padding-left: 200px;
-        padding-right: 200px;
-        padding-bottom: 50px;
-        padding-top: 80px;
-}
+            height: 100%;
+            padding-left: 200px;
+            padding-right: 200px;
+            padding-bottom: 50px;
+            padding-top: 80px;
+    }
 
-.contact-form input[type=email], .contact-form input[type=text] {
-    /*width: 300px;*/
-    max-width: 98%;
-    margin-bottom: 13px
-}
+    .contact-form input[type=email], .contact-form input[type=text] {
+        /*width: 300px;*/
+        max-width: 98%;
+        margin-bottom: 13px
+    }
 
-label {
-  display: block;
-  margin-top: 2em;
-  margin-bottom: 0.5em;
-  color: #999999;
-}
+    label {
+      display: block;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+      color: #999999;
+    }
 
-input {
-    border: 2px solid #333;
-    margin-bottom: 13px;
-    padding: 9px 10px;
-    background: none;
-    width: 32.7%;
-    float: left;
-    margin-right: 0.9%;
-}
+    input {
+        border: 2px solid #333;
+        margin-bottom: 13px;
+        padding: 9px 10px;
+        background: none;
+        width: 32.7%;
+        float: left;
+        margin-right: 0.9%;
+    }
 
-#your-number input{
-    width: 32.7%;
-    float: right;
-    margin-right: 0;
-}
+    #your-number input{
+        width: 32.7%;
+        float: right;
+        margin-right: 0;
+    }
 
-#messagearea {
-    width: 100%;
-}
+    #messagearea {
+        width: 100%;
+    }
 
-textarea {
-  width: 100%;
-  height: 250px;
-  padding: 0.5em 0.5em;
-  font-size: 1.2em;
-  border-radius: 3px;
-  border: 2px solid #333;
-  resize: none;
-  margin-bottom: 5px;
-}
+    textarea {
+      width: 100%;
+      height: 250px;
+      padding: 0.5em 0.5em;
+      font-size: 1.2em;
+      border-radius: 3px;
+      border: 2px solid #333;
+      resize: none;
+      margin-bottom: 5px;
+    }
 
-button {
-    width: 100%;
-    background: none;
-    color: #333333;
-    border: 2px solid #333;
-    padding: 8px;
-    font-weight: bold;
-}
+    button {
+        width: 100%;
+        background: none;
+        color: #333333;
+        border: 2px solid #333;
+        padding: 8px;
+        font-weight: bold;
+    }
 
-button:hover, button:focus {
-  cursor: pointer;
-  background-color: #edf4f4;
-}
+    button:hover, button:focus {
+      cursor: pointer;
+      background-color: #edf4f4;
+    }
 
-button:active {
-  opacity: 1;
-  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
-}
+    button:active {
+      opacity: 1;
+      box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+    }
 
-.success {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  color: black;
-  background-color: #edf4f4;
-  border: 1px solid black;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
+    .success {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: black;
+      background-color: #edf4f4;
+      border: 1px solid black;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+    }
 
-.error {
-  padding: 1em;
-  margin-bottom: 0.75rem;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
-  color: black;
-  background-color: #ff6666;
-  border: 1px solid black;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
+    .error {
+      padding: 1em;
+      margin-bottom: 0.75rem;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+      color: black;
+      background-color: #ff6666;
+      border: 1px solid black;
+      -webkit-border-radius: 4px;
+         -moz-border-radius: 4px;
+              border-radius: 4px;
+    }
 
-textarea:focus, input:focus{
-    outline: none;
-}
+    textarea:focus, input:focus{
+        outline: none;
+    }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+    /* =======================
+        FOOTER
+   ======================= */
 
-footer{
+   footer{
     height: 100px;
     width:100vw;
     background-color:#f6f7f8;
     font-family: sans-serif;
-    margin-top: 50px;
-    margin:0;
     position:relative;
-}
+    }
 
-.footername{
-    font-size:9px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    height:20px;
-    margin-top:50px;
-}
+    .footername{
+        font-size:9px;
+        text-transform:uppercase;
+        letter-spacing:1px;
+        height:20px;
+        margin-top:50px;
+        display:inline-block;
+    }
 
-.social{
-    float:right;
-    line-height:100px;
-}
+    .social{
+        float:right;
+        line-height:100px;
+    }
 
-.fa{
-    margin-top:50px;
-    margin-right:5px;
-    color: black !important;
-}
+    .fa{
+        margin-top:50px;
+        margin-right:5px;
+        color: black !important;
+        float:right;
+    }
 
+    div.col-xs.a {
+        padding-left: 10px;
+        padding-right: 10px;
 
+    }
 
 }
 
