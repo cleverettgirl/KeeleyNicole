@@ -43,7 +43,7 @@
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            echo "Oops! Something went wrong.";
+            echo "Oops! Something .";
         }
 
     } else {
