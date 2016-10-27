@@ -25,7 +25,7 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <!-- <link rel="stylesheet" href="css/style.css"> -->
-
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -121,7 +121,7 @@
         </div>
     </section>
 
-
+    <div id="content"></div>
     <section class="blogreads" id="blog">
         <div class="container">
             <div class="row">
@@ -262,6 +262,17 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!--End Bootstrap-->
         
-        
+        <!--Blogger API-->
+        <!--blogID=8063397340655641857-->
+        <!--GET https://www.googleapis.com/blogger/v3/blogs/80633973406556418572399953?key=AIzaSyD6ccugqxZC3L-CZ-GVQb5JIEmEbfH34TE-->
+
+
+        <script>
+          function handleResponse(response) {
+            document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+          }
+        </script>
+        <script src="https://www.googleapis.com/blogger/v3/blogs/8063397340655641857/?callback=handleResponse&key=AIzaSyD6ccugqxZC3L-CZ-GVQb5JIEmEbfH34TE"></script>
+
     </body>
 </html>
