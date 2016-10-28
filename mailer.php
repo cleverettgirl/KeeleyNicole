@@ -34,9 +34,15 @@
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
-
+        
+        // if ($mail){
+        //     echo "WORKS";
+        // } else {
+        //     echo "FUCK";
+        // }
+        
         // Send the email.
-        if (mail($message, $email, $name)) {
+        if (mail($recipient, $subject, $message, $email_content)) {
             // Set a 200 (okay) response code.
             
             http_response_code(200);
